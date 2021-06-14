@@ -3,7 +3,6 @@ def count_names_with_letter(letter, names)
     counter = 0
     names.each do |name| 
         counter += 1 if name.include?(letter)
-        
     end
     return counter
 end
