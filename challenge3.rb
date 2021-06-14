@@ -1,5 +1,11 @@
 def vowels_count(word)
-  
+  # sum = 0
+  # sum += word.split("").count("a")
+  # sum += word.split("").count("e")
+  # sum += word.split("").count("i")
+  # sum += word.split("").count("o")
+  # sum += word.split("").count("u")
+  word.downcase.split("").count {|letter| "aeiou".include?(letter) }
 end
 
 
