@@ -40,14 +40,29 @@ families = [
 
 def sum_all(families)
   # add your code here
+  sum = 0
+  families.each do |fam|
+    fam.each { |_, v| sum += v }
+  end
+  return sum
 end
 
 def sum_males(families)
   # add your code here
+  sum = 0
+  families.each do |fam|
+    fam.each { |k, v| sum += v if %w(dad son).include?(k) }
+  end
+  return sum
 end
 
 def avg_age_diff_daugther_son(families)
   # add your code here
+  sum = 0.0
+  families.each do |fam|
+    sum += (fam['daughter'] - fam['son']).abs
+  end
+  avg_diff = (sum / families.size).round(2)
 end
 
 # Return the following (to simplify all families have a mum,dad, daughter and son)
