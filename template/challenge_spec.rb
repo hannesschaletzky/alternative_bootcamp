@@ -1,10 +1,23 @@
+# frozen_string_literal: true
+
 require_relative 'challenge'
 
-# think about good tests
+# for more testing scenarios, look here
 # https://github.com/rspec/rspec-expectations
+# Make sure that your tests call the actual method you wanna test
 
-describe "is the equation true? " do
-  it "be_true" do
+# EXAMPLE
+# describe 'amount_even_numbers' do
+#   it 'should return the amount of even digits' do
+#     expect(amount_even_numbers(1_654_327_842)).to be 6
+#   end
+# end
+
+describe 'your method name' do
+  it 'first_test' do
+    expect(true).to be true
+  end
+  it 'second_test' do
     expect(true).to be true
   end
 end
