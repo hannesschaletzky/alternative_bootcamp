@@ -1,21 +1,23 @@
+# frozen_string_literal: true
+
 require 'fileutils'
 require 'rspec'
 
 cur_dir = File.dirname(__FILE__)
 
-# verify successful tests
+# verify successful rspec tests
 spec_path = "#{cur_dir}/challenge_spec.rb"
 result = RSpec::Core::Runner.run([spec_path])
 if result == 1
-  puts "Your tests did not pass!"
-  puts "You cannot submit your solution..."
-  puts ""
+  puts 'Your tests did not pass!'
+  puts 'You cannot submit your solution...'
+  puts ''
   return
 end
-puts "Your tests passed!"
-puts "Congrats"
-puts "(Insert GitHub SSH key if necessary)"
-puts ""
+puts 'Your tests passed!'
+puts 'Congrats'
+puts '(Insert GitHub SSH key if necessary)'
+puts ''
 
 # get githubname and add it in the filepath
 name = `git config user.name`.chomp.gsub(' ', '')
