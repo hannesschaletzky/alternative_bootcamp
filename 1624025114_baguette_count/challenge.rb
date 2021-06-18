@@ -1,0 +1,10 @@
+
+# Hellow please help out Louis, your favorite parisian baker!
+# Please give back the cost of changing the oven baking temperature per day for Louis!
+# He bakes baguettes ("B") and croissants ("C"), each time he starts cooking
+# one or the other he has to adapt the temperature of the oven, this costs him 5 euros.
+# don't forget it also costs him 5 euros to turn it on and off
+
+def oven_cost(batches)
+  # put your code here!
+end
