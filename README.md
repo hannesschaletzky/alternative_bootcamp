@@ -11,6 +11,5 @@ ADD THE WORKFLOW HERE
 
 
 ## Solve challenge:
-1.  open challenge.rb in folder
-2.  run 'rspec <folder_name>'
-3.  if all tests green -> run 'ruby <folder_name>/submit.rb'
+1.  open challenge.rb in folder -> solve
+2.  run 'ruby <folder_name>/submit.rb'
