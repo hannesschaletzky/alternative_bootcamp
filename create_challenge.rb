@@ -1,4 +1,4 @@
-require 'FileUtils'
+require 'fileutils'
 
 puts 'How do you want to name your challenge?'
 challenge_name = gets.chomp
