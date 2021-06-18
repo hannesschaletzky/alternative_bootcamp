@@ -3,6 +3,6 @@
 # Workflow:
 # specify the method signature (incl. parameters)
 
-# def amount_even_numbers(number)
+def sum(a, b)
 
-# end
+end

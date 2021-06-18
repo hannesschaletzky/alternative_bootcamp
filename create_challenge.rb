@@ -3,7 +3,7 @@ require 'FileUtils'
 # get folders
 folders = Dir.glob('*').select { |f| File.directory? f }
 # select challenge folders
-f_prefix = 'challenge_'
+f_prefix = 'cl_'
 chal_folders = folders.select { |f| f.include?(f_prefix) }
 chal_folders.sort!
 puts chal_folders
