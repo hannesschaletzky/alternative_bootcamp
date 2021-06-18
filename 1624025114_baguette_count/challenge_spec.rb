@@ -15,12 +15,12 @@ require_relative 'challenge'
 
 describe 'oven_cost' do
   it 'should return 15 if the baker only changed temperature once' do
-    expect(['B', 'C', 'C']).to be 15
+    expect(oven_cost(['B', 'C', 'C'])).to be 15
   end
   it 'should return 20 if the baker changed twice the oven temperature ' do
-    expect(['C','C','B','C','C']).to be 20
+    expect(oven_cost(['C','C','B','C','C'])).to be 20
   end
   it 'should return 0 if the baker did not touch the oven, come on! ' do
-    expect([]).to be 0
+    expect(oven_cost([])).to be 0
   end
 end
