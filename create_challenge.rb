@@ -19,3 +19,9 @@ name = "#{f_prefix}000#{max_num + 1}" if max_num < 9
 Dir.mkdir(name)
 # copy template to new challenge
 FileUtils.cp_r('template/.', "#{name}/")
+
+puts ''
+puts 'Your new challenge was created'
+puts "Folder: #{name}"
+puts 'Write the tests in _spec.rb and provide the method signature in challenge.rb'
+puts ''
