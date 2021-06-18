@@ -33,4 +33,5 @@ system("git restore #{challenge_file}")
 # commit & push solution
 system("git add #{solution_file}")
 system('git commit -m "added solution"')
+system('git pull origin master')
 system('git push origin master')
