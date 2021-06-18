@@ -5,6 +5,7 @@ require 'rspec'
 
 cur_dir = File.dirname(__FILE__)
 
+# TEST
 # verify successful rspec tests
 spec_path = "#{cur_dir}/challenge_spec.rb"
 result = RSpec::Core::Runner.run([spec_path])
@@ -19,15 +20,16 @@ puts 'Congrats'
 puts '(Insert GitHub SSH key if necessary)'
 puts ''
 
-# get githubname and add it in the filepath
+# ADD SOLUTION
+# save challenge solution as github-name in solutions folder
 name = `git config user.name`.chomp.gsub(' ', '')
-challenge_path = "#{cur_dir}/challenge.rb"
-# save in the solution folder
+challenge_file = "#{cur_dir}/challenge.rb"
 solution_file = "#{cur_dir}/solutions/#{name}.rb"
-FileUtils.cp(challenge_path, solution_file)
-# revert changes in challenge.rb
-system("git restore #{challenge_path}")
+FileUtils.cp(challenge_file, solution_file)
 
+# GIT
+# revert challenge.rb
+system("git restore #{challenge_file}")
 # commit & push solution
 system("git add #{solution_file}")
 system('git commit -m "added solution"')
