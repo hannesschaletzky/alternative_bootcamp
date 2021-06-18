@@ -7,7 +7,3 @@
 # def amount_even_numbers(number)
 
 # end
-
-def example_method
-
-end
