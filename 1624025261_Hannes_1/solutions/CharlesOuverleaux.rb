@@ -7,12 +7,12 @@ def decimal_to_binary(num)
   negative = false
   negative = true if num.negative?
   num = num.abs
-  arr = [num]
+  binary = [num]
   while num > 1
     num /= 2
-    arr << num
+    binary << num
   end
-  "#{negative ? '-' : ''}#{arr.map { |x| x % 2 }.reverse.join}"
+  "#{negative ? '-' : ''}#{binary.map { |x| x % 2 }.reverse.join}"
 end
 
 # p decimal_to_binary(0)
