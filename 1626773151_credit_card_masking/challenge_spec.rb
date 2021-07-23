@@ -15,24 +15,24 @@ require_relative 'challenge'
 
 describe 'your method name' do
   it 'masks a regular credit card number correctly' do
-    expect(maskify("4532994633460848")).to be "4###########0848"
+    expect(maskify("4532994633460848")).to eq "4###########0848"
   end
   it 'masks shorter credit card numbers equally' do
-    expect(maskify("64607935616")).to be "6######5616"
+    expect(maskify("64607935616")).to eq "6######5616"
   end
   it 'should return unmasked input if less then six digits' do
-    expect(maskify("88691")).to be "88691"
+    expect(maskify("88691")).to eq "88691"
   end
   it 'does not mask any non-digit characters' do
-    expect(maskify("ABCD-HELL-TEST-HAHA")).to be "ABCD-HELL-TEST-HAHA"
+    expect(maskify("ABCD-HELL-TEST-HAHA")).to eq "ABCD-HELL-TEST-HAHA"
   end
   it 'does not mask any non-digit characters when mixed with numbers' do
-    expect(maskify("3BCD-4353-TEST-H2HA-3453")).to be "3BCD-####-TEST-H#HA-3453"
+    expect(maskify("3BCD-4353-TEST-H2HA-3453")).to eq "3BCD-####-TEST-H#HA-3453"
   end
   it 'should return words unmasked' do
-    expect(maskify("Wagoneey")).to be "Wagoneey"
+    expect(maskify("Wagoneey")).to eq "Wagoneey"
   end
   it 'should return an empty string if inputted an empty string' do
-    expect(maskify("")).to be ""
+    expect(maskify("")).to eq ""
   end
 end
